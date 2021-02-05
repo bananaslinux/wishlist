@@ -6,4 +6,6 @@ apache2
 mysql-server
 php
 
-corntab:
+run autoinstallcode
+copy index.php and wishlist.php to /var/www/html
+type in browser localhost/index.php
