@@ -1,0 +1,8 @@
+#!/bin/bash
+apt install apache2
+apt install php
+apt install mysql_server
+
+sudo mysql
+create database wishlist
+use wishlist
