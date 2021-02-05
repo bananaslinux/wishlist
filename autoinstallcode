@@ -5,11 +5,25 @@ apt install mysql_server
 
 sudo mysql
 create database wishlist
-create user phpadmin identified by "Linux4Ever";
-grant all privileges on wishlist.* to 'phpadmin';
+use wishlist
+
+create table if not exists wishers (id int auto_increment
+primary key, id varchar(60), name varchar(80));
 
 
+create table if not exists wishes (id int auto_increment
+primary key, id varchar(60), wisher_id varchar(60), description varchar(80), due_date varchar(60));
+
+insert into wishers (name) values ('Ramy');
+insert into wishers (name) values ('Tom');
+insert into wishers (name) values ('Malin');
+insert into wishers (name) values ('Tessan');
+
+exit
+=======
 use wishlist
 create table if not existe users (id int auto_increment
 primary key.first_name varchar(80), last_name varchar(80))
 insert into wishes (wisher_id, description) values ('1',p)
+
+
