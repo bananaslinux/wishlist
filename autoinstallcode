@@ -5,4 +5,8 @@ apt install mysql_server
 
 sudo mysql
 create database wishlist
+create user phpadmin identified by "Linux4Ever";
+grant all privileges on wishlist.* to 'phpadmin';
+
+
 use wishlist
