@@ -6,3 +6,4 @@ apache2
 mysql-server
 phpmyadmin
 
+corntab:
