@@ -20,26 +20,26 @@ insert into wishes (wisher_id, wish, colour, type)
 values (1, 'Parrot', 'Gray', 'Blue jaco');
 insert into wishes (wisher_id, wish, colour, type) 
 values (1, 'Car', 'Red', 'Ferrari');
-insert into wishes (wisher_id, wish, colour, type) 
-values (1, 'Headset', 'NULL', 'NULL');
+insert into wishes (wisher_id, wish)
+values (1, 'Headset');
 
-insert into wishes (wisher_id, wish, colour, type) 
-values (2, 'Videogame', 'NULL', 'Playstation 5');
-insert into wishes (wisher_id, wish, colour, type) 
-values (2, 'Ice skates', 'Black', 'NULL');
-insert into wishes (wisher_id, wish, colour, type) 
-values (2, 'Telescope', 'NULL', 'NULL');
+insert into wishes (wisher_id, wish, type) 
+values (2, 'Videogame', 'Playstation 5');
+insert into wishes (wisher_id, wish, colour) 
+values (2, 'Ice skates', 'Black');
+insert into wishes (wisher_id, wish) 
+values (2, 'Telescope');
 
 insert into wishes (wisher_id, wish, colour, type) 
 values (3, 'Kitten', 'White', 'Female');
-insert into wishes (wisher_id, wish, colour, type) 
-values (3, 'Pants', 'Pink', 'NULL');
-insert into wishes (wisher_id, wish, colour, type) 
-values (3, 'Candy', 'NULL', 'Fizzy Pops');
+insert into wishes (wisher_id, wish, colour) 
+values (3, 'Pants', 'Kakhi');
+insert into wishes (wisher_id, wish, type) 
+values (3, 'Candy', 'Fizzy Pops');
 
 insert into wishes (wisher_id, wish, colour, type) 
 values (4, 'MyLittlePony', 'Blue', 'Rainbow Dash');
-insert into wishes (wisher_id, wish, colour, type) 
-values (4, 'Crayons', 'NULL', 'NULL');
-insert into wishes (wisher_id, wish, colour, type) 
-values (4, 'Bicykle', 'Pink', 'Mountainbike');
+insert into wishes (wisher_id, wish) 
+values (4, 'Crayons');
+insert into wishes (wisher_id, wish, colour) 
+values (4, 'Bicykle', 'Pink');                                                                                     
