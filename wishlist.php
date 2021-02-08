@@ -1,8 +1,8 @@
 <html>
-	<head><link href="santa.css" type="text/css" rel="stylesheet" media="all" /></head>
+  <head><link href="santa.css" type="text/css" rel="stylesheet" media="all" /></head>
     <body>
-	<div class="message">
-	<h2>
+  <div class="message">
+  <h2>
         Wish List of <?php echo $_GET['user'] . "<br/>"; ?>
         <?php
         $con = mysqli_connect("localhost", "phpadmin", "Linux4Ever");
@@ -15,21 +15,19 @@
         mysqli_select_db($con, "wishlist");
         $user = mysqli_real_escape_string($con, $_GET['user']);
         $wisher = mysqli_query($con, "SELECT id FROM wishers WHERE name='" . $user . "'");
-	if (mysqli_num_rows($wisher) < 1) {
-            exit("The person " . $_GET['user'] . " is not found. Please check the spelling and try again");
+  if (mysqli_num_rows($wisher) < 1) {
+            exit("The person " . $_GET['user'] . " is not found.");
         }
         $row = mysqli_fetch_row($wisher);
         $wisherID = $row[0];
         mysqli_free_result($wisher);
         ?>
-	</h2>
-	<div class="message">
-	<h1>
-	 <center><table>
+ 
+   <center><table>
             <tr>
                 <th>Wish</th>
                 <th>Colour</th>
-		<th>Type</th>
+    <th>Type</th>
 </tr>
 <tr>
             <?php
@@ -37,7 +35,7 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo "<tr><td>" . htmlentities($row['wish']) . "</td>";
                 echo "<td>" . htmlentities($row['colour']) . "</td>";
-		echo "<td>" . htmlentities($row['type']) . "</td></tr>\n";
+    echo "<td>" . htmlentities($row['type']) . "</td></tr>\n";
             }
             mysqli_free_result($result);
             mysqli_close($con);
