@@ -10,7 +10,7 @@ html>
         //set the default client character set 
         mysqli_set_charset($con, 'utf-8');
 
-        mysqli_select_db($con, "Wishlist");
+        mysqli_select_db($con, "wishlist");
         $user = mysqli_real_escape_string($con, $_GET['user']);
         $wisher = mysqli_query($con, "SELECT id FROM wishers WHERE name='" . $user . "'");
         if (mysqli_num_rows($wisher) < 1) {
@@ -22,14 +22,16 @@ html>
         ?>
         <table border="black">
             <tr>
-                <th>Item</th>
-                <th>Due Date</th>
+                <th>wish</th>
+                <th>color</th>
+                <th>type</th>
             </tr>
             <?php
-            $result = mysqli_query($con, "SELECT description, due_date FROM wishes WHERE wisher_id=" . $wisherID);
+            $result = mysqli_query($con, "SELECT Wish, Color, Type FROM wishes WHERE wisher_id=" . $wisherID);
             while ($row = mysqli_fetch_array($result)) {
-                echo "<tr><td>" . htmlentities($row['description']) . "</td>";
-                echo "<td>" . htmlentities($row['due_date']) . "</td></tr>\n";
+                echo "<tr><td>" . htmlentities($row['wish']) . "</td>";
+                echo "<td>" . htmlentities($row['color']) . "</td>";"
+                echo "<td>" . htmlentities($row['type']) . "</td></tr>\n";
             }
             mysqli_free_result($result);
 mysqli_close($con);
