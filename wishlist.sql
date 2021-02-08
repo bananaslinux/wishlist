@@ -37,8 +37,8 @@ values (3, 'Pants', 'Kakhi');
 insert into wishes (wisher_id, wish, type) 
 values (3, 'Candy', 'Fizzy Pops');
 
-insert into wishes (wisher_id, wish, colour, type) 
-values (4, 'MyLittlePony', 'Blue', 'Rainbow Dash');
+insert into wishes (wisher_id, wish, type) 
+values (4, 'MyLittlePony', 'Rainbow Dash');
 insert into wishes (wisher_id, wish) 
 values (4, 'Crayons');
 insert into wishes (wisher_id, wish, colour) 
