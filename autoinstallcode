@@ -1,28 +1,13 @@
 #!/bin/bash
 sudo apt update
 apt install apache2
-apt install php
 apt install mysql-server
+apt install php libapache2-mod-php php-mysql
+systemctl restart apache2
 
-sudo mysql
-create database wishlist
-use wishlist
-
-create table if not exists wishers (id int auto_increment
-primary key, name varchar(80));
-
-
-create table if not exists wishes (id int auto_increment
-primary key, wisher_id varchar(60), description varchar(80), colour varchar(60));
-
-insert into wishers (name) values ('Ramy');
-insert into wishers (name) values ('Tom');
-insert into wishers (name) values ('Malin');
-insert into wishers (name) values ('Tessan');
-insert into wishers (name) values ('Monika');
-
-INSERT INTO wishes (wisher_id, description, colour) 
- VALUES (1, 'Bicykle', 'Pink');
+mysql <wishlist.sql
+cp index.php /var/www/html
+cp wishlist.php /var/www/html
 
 exit
 =======
