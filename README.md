@@ -6,6 +6,8 @@ apache2
 mysql-server
 php
 
+make sure you have wishlist.sql and index.php + wishlist.php in your ~dir before running autoinstallcode.
+
 run autoinstallcode
-copy index.php and wishlist.php to /var/www/html
+
 type in browser localhost/index.php
