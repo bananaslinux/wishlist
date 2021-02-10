@@ -5,9 +5,22 @@ apt install mysql-server
 apt install php libapache2-mod-php php-mysql
 systemctl restart apache2
 
+Sudo apt install git
+git config --global user.name "bananaslinux"
+git config --global user.email "therese.from@yh.nackademin.se"
+
+ssh-keygen -t rsa -C therese.from@yh.nackademin.se -b 4096
+cd ~/.ssh/
+cat id_rsa.pub
+
+#Kopiera och lägg in på github settings för ssh connection.
+
+Ssh -T git@github.com
+
+cd ~
+git clone git@github.com:bananaslinux/wishlist
+
 mysql <wishlist.sql
 cp index.php /var/www/html
 cp wishlist.php /var/www/html
-
-exit
-=======
+rm /var/www/html/index.html
