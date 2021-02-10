@@ -6,8 +6,6 @@ apache2
 mysql-server
 php
 
-make sure you have wishlist.sql and index.php + wishlist.php in your ~dir before running autoinstallcode.
-
-run autoinstallcode
-
-type in browser ip address
+Santa wishlist database homepage.
+Daily backup.
+Script with service supervision.
