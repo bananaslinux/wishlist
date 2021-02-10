@@ -10,4 +10,4 @@ make sure you have wishlist.sql and index.php + wishlist.php in your ~dir before
 
 run autoinstallcode
 
-type in browser localhost/index.php
+type in browser ip address
