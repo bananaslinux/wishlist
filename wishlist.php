@@ -3,6 +3,10 @@
     <body>
   <div class="message">
   <h2>
+    <form action ="index.php">
+        <input type="submit" value="Return to start">
+</form>
+
         Wish List of <?php echo $_GET['user'] . "<br/>"; ?>
         <?php
         $con = mysqli_connect("localhost", "phpadmin", "Linux4Ever");
